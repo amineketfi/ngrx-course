@@ -54,10 +54,10 @@ const routes: Routes = [
         MatToolbarModule,
         AuthModule.forRoot(),
         StoreModule.forRoot(reducers, {
-            metaReducers,
+            metaReducers, // reducers triggered bfr our normal reducers
             runtimeChecks : {
-                strictStateImmutability: true,
-                strictActionImmutability: true,
+                strictStateImmutability: true, // make sure that the States in our store are never accidentally mutated
+                strictActionImmutability: true, // make sure that the Actions in our app are never accidentally mutated
                 strictActionSerializability: true,
                 strictStateSerializability:true
             }
