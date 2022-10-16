@@ -17,3 +17,4 @@ export const isLoggedOut = createSelector(
     isLoggedIn,
     loggedIn => !loggedIn
 );
+
